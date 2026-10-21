@@ -1,2 +1,3 @@
 FROM n8nio/n8n:latest
-COPY n8n.config.js /home/node/.n8n/n8n.config.js
+ENV N8N_RUNNERS_ENABLED=false
+CMD ["n8n", "start", "--disable-cmd-runners"]
